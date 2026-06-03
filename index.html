@@ -3,42 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brainrots RNG</title>
+  <title>Brainrots RNG - 3D</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
+  <div id="ui-overlay">
+    <div class="top-bar">
       <h1>🧠 Brainrots RNG</h1>
       <div class="stats">
-        <div>Gems: <span id="gems">0</span></div>
-        <div>Brainrots: <span id="brainrots">0</span></div>
+        <span>Gems: <strong id="gems">0</strong></span>
+        <span>Brainrots: <strong id="brainrots">0</strong></span>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <!-- Lucky Block Area -->
-      <div class="mining-area">
-        <h2>🔨 Lucky Blocks</h2>
-        <div id="block-container" class="block-container">
-          <!-- Blocks will be added by JS -->
-        </div>
-        <button id="spawn-block" class="btn">Spawn New Block</button>
-      </div>
+    <div class="instructions">
+      <strong>WASD</strong> - Move | <strong>Mouse</strong> - Look | <strong>Click</strong> - Mine | <strong>F</strong> - Fullscreen
+    </div>
 
-      <!-- Upgrade Shop -->
-      <div class="shop">
-        <h2>🛠️ Pickaxe Upgrades</h2>
-        <div id="upgrades"></div>
-      </div>
-
-      <!-- Collection -->
-      <div class="collection">
-        <h2>📖 Brainrot Index</h2>
-        <div id="collection-grid" class="collection-grid"></div>
-      </div>
-    </main>
+    <div id="crosshair">+</div>
   </div>
+
+  <div id="game-over" class="hidden">Game Over</div>
 
   <script src="script.js"></script>
 </body>
